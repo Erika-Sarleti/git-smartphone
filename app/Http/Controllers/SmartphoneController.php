@@ -14,8 +14,8 @@ class SmartphoneController extends Controller
      */
     public function index()
     {
-        // $phone = Smartphone::all();
-        // return view('', '');
+        $phone = Smartphone::all();
+        return view('smartphone.smartphone', compact('phone'));
     }
 
     /**
@@ -47,7 +47,7 @@ class SmartphoneController extends Controller
      */
     public function show(Smartphone $smartphone)
     {
-        // return view('', compact(''));
+        // return view('', compact('smartphone'));
     }
 
     /**
