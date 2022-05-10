@@ -14,7 +14,7 @@ class SmartphoneController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
