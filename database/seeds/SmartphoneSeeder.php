@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Smartphone;
+
 class SmartphoneSeeder extends Seeder
 {
     /**
@@ -43,5 +45,17 @@ class SmartphoneSeeder extends Seeder
                 'year' => '1250'
             ],
         ];
+
+        foreach ($smartphones as $smartphone) {
+            $smartphoneData = [
+                'brand'           => $smartphone['brand'],
+                'model'           => $smartphone['model'],
+                'year'            => $smartphone['year']
+            ];
+
+            $smartphoneTable = new Smartphone();
+            $smartphoneTable->fill($smartphoneData);
+            $smartphoneTable->save();
+        }
     }
 }
