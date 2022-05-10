@@ -2,7 +2,7 @@
 
 
 @section('main')
-<ol>
+<ol class="container">
     @foreach($phone as $item)
     <li>
         {{ $item->model }}
