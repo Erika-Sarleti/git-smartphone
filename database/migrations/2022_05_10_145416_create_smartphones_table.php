@@ -15,6 +15,9 @@ class CreateSmartphonesTable extends Migration
     {
         Schema::create('smartphones', function (Blueprint $table) {
             $table->id();
+            $table->string('brand', 100)->nullable();
+            $table->string('model', 100)->nullable();
+            $table->integer('year')->nullable();
             $table->timestamps();
         });
     }
